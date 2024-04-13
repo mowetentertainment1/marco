@@ -93,15 +93,15 @@ class TweetBottomSheet {
           ),
         ),
         _widgetBottomSheetRow(context, AppIcon.link,
-            text: 'Copy link to tweet', isEnable: true, onPressed: () async {
+            text: 'Copy link to post', isEnable: true, onPressed: () async {
           Navigator.pop(context);
           var uri = await Utility.createLinkToShare(
             context,
             "tweet/${model.key}",
             socialMetaTagParameters: SocialMetaTagParameters(
                 description: model.description ??
-                    "${model.user!.displayName} posted a tweet on Fwitter.",
-                title: "Tweet on Fwitter app",
+                    "${model.user!.displayName} posted a post on Marco.",
+                title: "Post on Marco app",
                 imageUrl: Uri.parse(
                     "https://play-lh.googleusercontent.com/e66XMuvW5hZ7HnFf8R_lcA3TFgkxm0SuyaMsBs3KENijNHZlogUAjxeu9COqsejV5w=s180-rw")),
           );
@@ -109,19 +109,19 @@ class TweetBottomSheet {
           Utility.copyToClipBoard(
               context: context,
               text: uri.toString(),
-              message: "Tweet link copy to clipboard");
+              message: "Post link copy to clipboard");
         }),
         isMyTweet
             ? _widgetBottomSheetRow(
                 context,
                 AppIcon.delete,
-                text: 'Delete Tweet',
+                text: 'Delete Post',
                 onPressed: () {
                   showDialog(
                     context: context,
                     builder: (_) => AlertDialog(
                       title: const Text("Delete"),
-                      content: const Text('Do you want to delete this Tweet?'),
+                      content: const Text('Do you want to delete this Post?'),
                       actions: [
                         TextButton(
                           onPressed: () {
@@ -197,7 +197,7 @@ class TweetBottomSheet {
             : _widgetBottomSheetRow(
                 context,
                 AppIcon.report,
-                text: 'Report Tweet',
+                text: 'Report Post',
               ),
       ],
     );
@@ -221,14 +221,14 @@ class TweetBottomSheet {
           ),
         ),
         _widgetBottomSheetRow(context, AppIcon.link,
-            text: 'Copy link to tweet', isEnable: true, onPressed: () async {
+            text: 'Copy link to Post', isEnable: true, onPressed: () async {
           var uri = await Utility.createLinkToShare(
             context,
             "tweet/${model.key}",
             socialMetaTagParameters: SocialMetaTagParameters(
                 description: model.description ??
-                    "${model.user!.displayName} posted a tweet on Fwitter.",
-                title: "Tweet on Fwitter app",
+                    "${model.user!.displayName} posted a post on Marco.",
+                title: "Post on Marco app",
                 imageUrl: Uri.parse(
                     "https://play-lh.googleusercontent.com/e66XMuvW5hZ7HnFf8R_lcA3TFgkxm0SuyaMsBs3KENijNHZlogUAjxeu9COqsejV5w=s180-rw")),
           );
@@ -237,19 +237,19 @@ class TweetBottomSheet {
           Utility.copyToClipBoard(
               context: context,
               text: uri.toString(),
-              message: "Tweet link copy to clipboard");
+              message: "Post link copy to clipboard");
         }),
         isMyTweet
             ? _widgetBottomSheetRow(
                 context,
                 AppIcon.delete,
-                text: 'Delete Tweet',
+                text: 'Delete Post',
                 onPressed: () {
                   showDialog(
                     context: context,
                     builder: (_) => AlertDialog(
                       title: const Text("Delete"),
-                      content: const Text('Do you want to delete this Tweet?'),
+                      content: const Text('Do you want to delete this Post?'),
                       actions: [
                         TextButton(
                           onPressed: () {
@@ -322,7 +322,7 @@ class TweetBottomSheet {
             : _widgetBottomSheetRow(
                 context,
                 AppIcon.report,
-                text: 'Report Tweet',
+                text: 'Report Post',
               ),
       ],
     );
@@ -423,7 +423,7 @@ class TweetBottomSheet {
           context,
           AppIcon.retweet,
           isEnable: true,
-          text: 'Retweet',
+          text: 'Repost',
           onPressed: () async {
             var state = Provider.of<FeedState>(context, listen: false);
             var authState = Provider.of<AuthState>(context, listen: false);
@@ -454,7 +454,7 @@ class TweetBottomSheet {
         _widgetBottomSheetRow(
           context,
           AppIcon.edit,
-          text: 'Retweet with comment',
+          text: 'Repost with comment',
           isEnable: true,
           onPressed: () {
             var state = Provider.of<FeedState>(context, listen: false);
@@ -496,7 +496,7 @@ class TweetBottomSheet {
   Widget _shareTweet(BuildContext context, FeedModel model, TweetType? type) {
     var socialMetaTagParameters = SocialMetaTagParameters(
         description: model.description ?? "",
-        title: "${model.user!.displayName} posted a tweet on Fwitter.",
+        title: "${model.user!.displayName} posted on Marco.",
         imageUrl: Uri.parse(model.user?.profilePic ??
             "https://play-lh.googleusercontent.com/e66XMuvW5hZ7HnFf8R_lcA3TFgkxm0SuyaMsBs3KENijNHZlogUAjxeu9COqsejV5w=s180-rw"));
     return Column(
@@ -540,19 +540,19 @@ class TweetBottomSheet {
               socialMetaTagParameters: socialMetaTagParameters,
             );
             var uri = await url;
-            Utility.share(uri.toString(), subject: "Tweet");
+            Utility.share(uri.toString(), subject: "Post");
           },
         ),
         const SizedBox(height: 8),
         _widgetBottomSheetRow(
           context,
           AppIcon.image,
-          text: 'Share with Tweet thumbnail',
+          text: 'Share with Post thumbnail',
           isEnable: true,
           onPressed: () {
             socialMetaTagParameters = SocialMetaTagParameters(
                 description: model.description ?? "",
-                title: "${model.user!.displayName} posted a tweet on Fwitter.",
+                title: "${model.user!.displayName} posted on Marco.",
                 imageUrl: Uri.parse(model.user?.profilePic ??
                     "https://play-lh.googleusercontent.com/e66XMuvW5hZ7HnFf8R_lcA3TFgkxm0SuyaMsBs3KENijNHZlogUAjxeu9COqsejV5w=s180-rw"));
             Navigator.pop(context);

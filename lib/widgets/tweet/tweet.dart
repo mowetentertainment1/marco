@@ -172,7 +172,7 @@ class _TweetBody extends StatelessWidget {
         fontSize: descriptionFontSize,
         fontWeight: descriptionFontWeight);
     TextStyle urlStyle = TextStyle(
-        color: Colors.blue,
+        color: Colors.green,
         fontSize: descriptionFontSize,
         fontWeight: descriptionFontWeight);
     return Row(
@@ -305,7 +305,7 @@ class _TweetDetailBody extends StatelessWidget {
         fontSize: descriptionFontSize,
         fontWeight: descriptionFontWeight);
     TextStyle urlStyle = TextStyle(
-        color: Colors.blue,
+        color: Colors.green,
         fontSize: descriptionFontSize,
         fontWeight: descriptionFontWeight);
     return Column(

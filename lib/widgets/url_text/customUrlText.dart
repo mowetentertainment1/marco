@@ -50,7 +50,7 @@ class UrlText extends StatelessWidget {
         widgets.add(_LinkTextSpan(
             onHashTagPressed: onHashTagPressed,
             text: result.text,
-            style: urlStyle ?? const TextStyle(color: Colors.blue)));
+            style: urlStyle ?? const TextStyle(color: Colors.green)));
       } else {
         widgets.add(TextSpan(
             text: result.text,
