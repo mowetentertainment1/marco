@@ -194,12 +194,12 @@ class _ProfilePageState extends State<ProfilePage>
                                                 color: isMyProfile
                                                     ? Colors.black87
                                                         .withAlpha(180)
-                                                    : Colors.blue,
+                                                    : Colors.green,
                                                 width: 1),
                                             shape: BoxShape.circle),
                                         child: const Icon(
                                           AppIcon.messageEmpty,
-                                          color: Colors.blue,
+                                          color: Colors.green,
                                           size: 20,
                                         ),
                                       ),
@@ -233,7 +233,7 @@ class _ProfilePageState extends State<ProfilePage>
                                     border: Border.all(
                                         color: isMyProfile
                                             ? Colors.black87.withAlpha(180)
-                                            : Colors.blue,
+                                            : Colors.green,
                                         width: 1),
                                     borderRadius: BorderRadius.circular(20),
                                   ),
@@ -251,7 +251,7 @@ class _ProfilePageState extends State<ProfilePage>
                                           ? Colors.black87.withAlpha(180)
                                           : isFollower()
                                               ? TwitterColor.white
-                                              : Colors.blue,
+                                              : Colors.green,
                                       fontSize: 17,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -318,8 +318,8 @@ class _ProfilePageState extends State<ProfilePage>
       socialMetaTagParameters: SocialMetaTagParameters(
         description: !user.bio!.contains("Edit profile")
             ? user.bio
-            : "Checkout ${user.displayName}'s profile on Fwitter app",
-        title: "${user.displayName} is on Fwitter app",
+            : "Checkout ${user.displayName}'s profile on Marco app",
+        title: "${user.displayName} is on Marco app",
         imageUrl: Uri.parse(user.profilePic!),
       ),
     );
@@ -368,8 +368,8 @@ class _ProfilePageState extends State<ProfilePage>
                         indicator: TabIndicator(),
                         controller: _tabController,
                         tabs: const <Widget>[
-                          Text("Tweets"),
-                          Text("Tweets & replies"),
+                          Text("Posts"),
+                          Text("Posts & replies"),
                           Text("Media")
                         ],
                       ),
@@ -440,10 +440,10 @@ class _ProfilePageState extends State<ProfilePage>
                 padding: const EdgeInsets.only(top: 50, left: 30, right: 30),
                 child: NotifyText(
                   title: isMyProfile
-                      ? 'You haven\'t ${isReply ? 'reply to any Tweet' : isMedia ? 'post any media Tweet yet' : 'post any Tweet yet'}'
-                      : '${authState.profileUserModel.userName} hasn\'t ${isReply ? 'reply to any Tweet' : isMedia ? 'post any media Tweet yet' : 'post any Tweet yet'}',
+                      ? 'You haven\'t ${isReply ? 'reply to any Post' : isMedia ? 'post any media Post yet' : 'post any Post yet'}'
+                      : '${authState.profileUserModel.userName} hasn\'t ${isReply ? 'reply to any Post' : isMedia ? 'post any media yet' : 'post anything yet'}',
                   subTitle: isMyProfile
-                      ? 'Tap tweet button to add new'
+                      ? 'Tap post button to add new'
                       : 'Once he\'ll do, they will be shown up here',
                 ),
               )

@@ -67,10 +67,10 @@ class _SignupState extends State<Signup> {
             _submitButton(context),
             const Divider(height: 30),
             const SizedBox(height: 30),
-            GoogleLoginButton(
-              loginCallback: widget.loginCallback,
-              loader: loader,
-            ),
+            // GoogleLoginButton(
+            //   loginCallback: widget.loginCallback,
+            //   loader: loader,
+            // ),
             const SizedBox(height: 30),
           ],
         ),
@@ -103,7 +103,7 @@ class _SignupState extends State<Signup> {
             borderRadius: BorderRadius.all(
               Radius.circular(30.0),
             ),
-            borderSide: BorderSide(color: Colors.blue),
+            borderSide: BorderSide(color: Colors.green),
           ),
           contentPadding:
               const EdgeInsets.symmetric(vertical: 15, horizontal: 20),

@@ -206,9 +206,9 @@ class _ComposeTweetReplyPageState extends State<ComposeTweetPage> {
         onActionPressed: _submitButton,
         isCrossButton: true,
         submitButtonText: widget.isTweet
-            ? 'Tweet'
+            ? 'Post'
             : widget.isRetweet
-                ? 'Retweet'
+                ? 'Repost'
                 : 'Reply',
         isSubmitDisable:
             !Provider.of<ComposeTweetState>(context).enableSubmitButton ||
@@ -309,7 +309,7 @@ class _ComposeRetweet
               fontWeight: FontWeight.w400,
             ),
             urlStyle: const TextStyle(
-                color: Colors.blue, fontWeight: FontWeight.w400),
+                color: Colors.green, fontWeight: FontWeight.w400),
           ),
       ],
     );
@@ -421,7 +421,7 @@ class _ComposeTweet
                       ),
                       urlStyle: const TextStyle(
                         fontSize: 16,
-                        color: Colors.blue,
+                        color: Colors.green,
                         fontWeight: FontWeight.w400,
                       ),
                     ),
@@ -559,7 +559,7 @@ class _TextField extends StatelessWidget {
                   ? 'What\'s happening?'
                   : isRetweet
                       ? 'Add a comment'
-                      : 'Tweet your reply',
+                      : 'Post your reply',
               hintStyle: const TextStyle(fontSize: 18)),
         ),
       ],

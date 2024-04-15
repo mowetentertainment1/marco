@@ -11,6 +11,7 @@ import 'package:flutter_twitter_clone/widgets/customWidgets.dart';
 import 'package:flutter_twitter_clone/widgets/share_widget.dart';
 import 'package:flutter_twitter_clone/widgets/tweet/tweet.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class TweetBottomSheet {
   Widget tweetOptionIcon(BuildContext context,
@@ -198,6 +199,8 @@ class TweetBottomSheet {
                 context,
                 AppIcon.report,
                 text: 'Report Post',
+                isEnable: true,
+                onPressed: () => launchUrl(Uri.parse('mailto:mowetentertainment1@gmai1.com?subject=marco report post&body=Hi,I found this post inappropriate ${model.key} ')),
               ),
       ],
     );
@@ -323,6 +326,8 @@ class TweetBottomSheet {
                 context,
                 AppIcon.report,
                 text: 'Report Post',
+                isEnable: true,
+                onPressed: _launchURL,
               ),
       ],
     );
@@ -576,5 +581,14 @@ class TweetBottomSheet {
         const SizedBox(height: 12),
       ],
     );
+  }
+}
+
+_launchURL() async {
+  const url = 'https://www.smithandtech.com';
+  if (await canLaunchUrl(Uri.parse(url))) {
+    await launchUrl(Uri.parse(url));
+  } else {
+    throw 'Could not launch $url';
   }
 }

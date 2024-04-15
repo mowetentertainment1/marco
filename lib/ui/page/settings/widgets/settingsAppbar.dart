@@ -25,7 +25,7 @@ class SettingsAppBar extends StatelessWidget implements PreferredSizeWidget {
           )
         ],
       ),
-      iconTheme: const IconThemeData(color: Colors.blue),
+      iconTheme: const IconThemeData(color: Colors.green),
       backgroundColor: Colors.white,
     );
   }

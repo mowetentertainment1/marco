@@ -6,6 +6,7 @@ import 'package:flutter_twitter_clone/ui/theme/theme.dart';
 import 'package:flutter_twitter_clone/widgets/customFlatButton.dart';
 import 'package:flutter_twitter_clone/widgets/newWidget/title_text.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../homePage.dart';
 import 'signin.dart';
 
@@ -94,7 +95,31 @@ class _WelcomePageState extends State<WelcomePage> {
                 )
               ],
             ),
-            const SizedBox(height: 20)
+            const SizedBox(height: 20),
+            Wrap(
+              alignment: WrapAlignment.center,
+              crossAxisAlignment: WrapCrossAlignment.center,
+              children: <Widget>[
+                const TitleText(
+                  'By Using You Are Agreeing To The',
+                  fontSize: 14,
+                  fontWeight: FontWeight.w300,
+                ),
+                InkWell(
+                  onTap: () => launchUrl(Uri.parse('https://www.smithandtech.com/privacy-policy/')),
+                  child: Padding(
+                    padding:
+                    const EdgeInsets.symmetric(horizontal: 2, vertical: 10),
+                    child: TitleText(
+                      ' Terms Of Use',
+                      fontSize: 14,
+                      color: TwitterColor.dodgeBlue,
+                      fontWeight: FontWeight.w300,
+                    ),
+                  ),
+                )
+              ],
+            ),
           ],
         ),
       ),

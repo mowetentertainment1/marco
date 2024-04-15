@@ -194,7 +194,7 @@ class Routes {
           centerTitle: true,
         ),
         body: Center(
-          child: Text('${settings.name!.split('/')[1]} Comming soon..'),
+          child: Text('${settings.name!.split('/')[1]} Coming soon..'),
         ),
       ),
     );

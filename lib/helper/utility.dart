@@ -250,9 +250,9 @@ class Utility {
       {required SocialMetaTagParameters socialMetaTagParameters}) async {
     final DynamicLinkParameters parameters = DynamicLinkParameters(
       uriPrefix: 'https://fwitter.page.link',
-      link: Uri.parse('https://twitter.com/$id'),
+      link: Uri.parse('https://smithandtech.com/$id'),
       androidParameters: AndroidParameters(
-        packageName: 'com.thealphamerc.flutter_twitter_clone_dev',
+        packageName: 'com.smithandtech.marco',
         minimumVersion: 0,
       ),
       socialMetaTagParameters: socialMetaTagParameters,
@@ -269,7 +269,7 @@ class Utility {
     var url = await createLinkToShare(context, id,
         socialMetaTagParameters: socialMetaTagParameters);
 
-    share(url.toString(), subject: "Tweet");
+    share(url.toString(), subject: "Post");
   }
 
   static shareFile(List<String> path, {String text = ""}) {

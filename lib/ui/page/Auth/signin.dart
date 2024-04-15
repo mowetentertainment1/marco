@@ -56,13 +56,13 @@ class _SignInState extends State<SignIn> {
             const Divider(
               height: 30,
             ),
-            const SizedBox(
-              height: 30,
-            ),
-            GoogleLoginButton(
-              loginCallback: widget.loginCallback!,
-              loader: loader,
-            ),
+            // const SizedBox(
+            //   height: 30,
+            // ),
+            // GoogleLoginButton(
+            //   loginCallback: widget.loginCallback!,
+            //   loader: loader,
+            // ),
             const SizedBox(height: 100),
           ],
         ),
@@ -91,7 +91,7 @@ class _SignInState extends State<SignIn> {
           border: InputBorder.none,
           focusedBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(30.0)),
-              borderSide: BorderSide(color: Colors.blue)),
+              borderSide: BorderSide(color: Colors.green)),
           contentPadding:
               const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
         ),

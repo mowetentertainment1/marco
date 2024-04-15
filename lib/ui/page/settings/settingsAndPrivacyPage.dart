@@ -32,10 +32,10 @@ class SettingsAndPrivacyPage extends StatelessWidget {
           ),
           const Divider(height: 0),
           const SettingRowWidget("Privacy and Policy",
-              navigateTo: 'PrivacyAndSaftyPage'),
+              navigateTo: 'PrivacyAndSafetyPage'),
           const SettingRowWidget("Notification",
               navigateTo: 'NotificationPage'),
-          const SettingRowWidget("Content prefrences",
+          const SettingRowWidget("Content preferences",
               navigateTo: 'ContentPrefrencePage'),
           const HeaderWidget(
             'General',
@@ -48,7 +48,7 @@ class SettingsAndPrivacyPage extends StatelessWidget {
               navigateTo: 'AccessibilityPage'),
           const SettingRowWidget("Proxy", navigateTo: "ProxyPage"),
           const SettingRowWidget(
-            "About Fwitter",
+            "About Marco",
             navigateTo: "AboutPage",
           ),
           const SettingRowWidget(
@@ -56,7 +56,7 @@ class SettingsAndPrivacyPage extends StatelessWidget {
             showDivider: false,
             vPadding: 10,
             subtitle:
-                'These settings affect all of your Fwitter accounts on this devce.',
+                'These settings affect all of your Marco accounts on this devce.',
           )
         ],
       ),

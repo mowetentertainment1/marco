@@ -69,7 +69,7 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
           border: InputBorder.none,
           focusedBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(30.0)),
-              borderSide: BorderSide(color: Colors.blue)),
+              borderSide: BorderSide(color: Colors.green)),
           contentPadding:
               const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
         ),

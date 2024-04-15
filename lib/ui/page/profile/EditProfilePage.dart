@@ -309,7 +309,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
       key: _scaffoldKey,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        iconTheme: const IconThemeData(color: Colors.blue),
+        iconTheme: const IconThemeData(color: Colors.green),
         title: customTitleText(
           'Profile Edit',
         ),
@@ -320,7 +320,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
               child: Text(
                 'Save',
                 style: TextStyle(
-                  color: Colors.blue,
+                  color: Colors.green,
                   fontSize: 17,
                   fontWeight: FontWeight.bold,
                 ),

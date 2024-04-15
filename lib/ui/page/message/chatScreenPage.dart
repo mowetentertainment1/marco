@@ -251,7 +251,7 @@ class _ChatScreenPageState extends State<ChatScreenPage> {
               )
             ],
           ),
-          iconTheme: const IconThemeData(color: Colors.blue),
+          iconTheme: const IconThemeData(color: Colors.green),
           backgroundColor: Colors.white,
           actions: <Widget>[
             IconButton(

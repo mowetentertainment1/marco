@@ -24,9 +24,9 @@ class PrivacyAndSaftyPage extends StatelessWidget {
         children: const <Widget>[
           HeaderWidget('Tweets'),
           SettingRowWidget(
-            "Protect your tweet",
+            "Protect your Marco",
             subtitle:
-                'Only current followers and people you approve in future will be able to see your tweets.',
+                'Only current followers and people you approve in future will be able to see your posts.',
             vPadding: 15,
             showDivider: false,
             visibleSwitch: true,
@@ -48,9 +48,9 @@ class PrivacyAndSaftyPage extends StatelessWidget {
             secondHeader: true,
           ),
           SettingRowWidget(
-            "Connect to Periscope",
+            "Connect to Marco",
             subtitle:
-                'If selected, you can go live and comment on Periscope broadcasts, and people will be able to see when you\'re watching. if this setting is off, people won\'t be able comment or broadcast live.',
+                'If selected, you can go live and comment on Marco broadcasts, and people will be able to see when you\'re watching. if this setting is off, people won\'t be able comment or broadcast live.',
             vPadding: 15,
             showDivider: false,
             visibleSwitch: true,
@@ -82,7 +82,7 @@ class PrivacyAndSaftyPage extends StatelessWidget {
             visibleSwitch: true,
           ),
           SettingRowWidget(
-            "Mark media you tweet as containing material thta may be sensitive",
+            "Mark media you post as containing material that may be sensitive",
             vPadding: 15,
             showDivider: false,
             visibleSwitch: true,
@@ -106,7 +106,7 @@ class PrivacyAndSaftyPage extends StatelessWidget {
           SettingRowWidget(
             "Precise location",
             subtitle:
-                'Disabled \n\n\nIf enabled, Fwitter will collect, store, and use your device\'s precise location, such as your GPS information. This lets Fwitter improve your experience - for example, showing you mpre local content, ads, and recommendations.',
+                'Disabled \n\n\nIf enabled, Marco will collect, store, and use your device\'s precise location, such as your GPS information. This lets Marco improve your experience - for example, showing you more local content, ads, and recommendations.',
           ),
           HeaderWidget(
             'Personalisation and data',
@@ -117,7 +117,7 @@ class PrivacyAndSaftyPage extends StatelessWidget {
             subtitle: "Allow all",
           ),
           SettingRowWidget(
-            "See your Fwitter data",
+            "See your Marco data",
             subtitle:
                 "Review and edit your profile information and data associated with your account.",
           ),

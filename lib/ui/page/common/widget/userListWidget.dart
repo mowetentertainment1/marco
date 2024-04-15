@@ -164,7 +164,7 @@ class UserTile extends StatelessWidget {
                     child: Text(
                       isFollow ? 'Following' : 'Follow',
                       style: TextStyle(
-                        color: isFollow ? TwitterColor.white : Colors.blue,
+                        color: isFollow ? TwitterColor.white : Colors.green,
                         fontSize: 12,
                         fontWeight: FontWeight.bold,
                       ),
